@@ -1,23 +1,24 @@
+import { useMenu } from '../../hooks/useMenu';
+import { MenuNavigation } from '../menu'
 import './header.scss'
 
 export function Header() {
+
+    const { handleToggleMenu } = useMenu();
+     
     return(
-        <header>
-            <div>
-                <h4>
-                    Lucca Soncini
-                </h4>
+        <header className="menu-principal">
+            <div className="menu-left">
+                <h4>Lucca Soncini</h4>
             </div>
-            <div>
-                <nav>
-                    <ul>
-                        <li><a href=">Home"></a></li>
-                        <li><a href="Sobre Mim"></a></li>
-                        <li><a href="Habilidades"></a></li>
-                        <li><a href="Trabalhos"></a></li>
-                        <li><a href="Contatos"></a></li>
-                    </ul>
-                </nav>
+           
+            <div className="menu-right">
+                <div className="open-menu" onClick={handleToggleMenu}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>    
+                <MenuNavigation />
             </div>
         </header>
     )
