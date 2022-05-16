@@ -4,7 +4,7 @@ import './header.scss'
 
 export function Header() {
 
-    const { handleToggleMenu } = useMenu();
+    const { isMenuOpened, handleToggleMenu } = useMenu();
      
     return(
         <header className="menu-principal">
@@ -13,12 +13,12 @@ export function Header() {
             </div>
            
             <div className="menu-right">
-                <div className="open-menu" onClick={handleToggleMenu}>
+                <div className={ isMenuOpened ? 'open-menu opened' : 'open-menu'} onClick={handleToggleMenu}>
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>    
-                <MenuNavigation />
+                <MenuNavigation  />
             </div>
         </header>
     )
