@@ -1,11 +1,8 @@
 import React from 'react';
+import { Header } from './components/header';
 
-function App() {
+export function App() {
   return (
-    <h1>
-      Começando a construir meu portifolio
-    </h1>
+    <Header />
   );
 }
-
-export default App;
