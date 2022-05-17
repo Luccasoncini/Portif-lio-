@@ -1,0 +1,57 @@
+.homepage{
+    margin-top: 50px;
+    .homepage-principal-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        padding: 25px 0px;
+
+        h1{
+            font-size: 2rem;
+            text-align: start;
+            margin-bottom: 30px;
+            span{
+                color: #3e6ff4;
+            }
+        }
+        .contacts-button{
+            color: white;
+            font-weight: 600;
+            letter-spacing: 1px;
+            background-color: #3e6ff4;
+            display: inline-flex;
+            padding: 15px 30px;
+            border-radius: 0.7rem;
+        }
+        .homepage-redes-sociais{
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            width: 100%;
+            flex-flow: nowrap;
+            margin-top: 30px;
+            position: relative;
+            .redes-sociais{
+                width: 20%; 
+                display: flex;
+                flex-direction: column;
+                justify-content: center; 
+                align-items: start;
+                a{
+                    display: inline-flex;
+                    font-size: 1.5rem;
+                    color: black;
+                    margin: 15px 0px;
+                    &:hover{
+                        transform: scale(1.2);
+                    }
+                }
+            }
+            img{
+                width: 175px;
+                border-radius: 20%;
+            }
+        }
+    }
+}
