@@ -1,8 +1,8 @@
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
-import { useMenu } from "../../hooks/useMenu";
-import "./menu.scss"
+import { useMenu } from "../../../hooks/useMenu";
+import "./menu-list.scss"
 
-export function MenuNavigation() {
+export function MenuList() {
     const { isMenuOpened, handleToggleMenu } = useMenu();
 
     return(

@@ -1,5 +1,6 @@
 import { useMenu } from '../../hooks/useMenu';
-import { MenuNavigation } from '../menu'
+import { Menu } from './menu'
+import { MenuList } from './menu-list'
 import './header.scss'
 
 export function Header() {
@@ -13,12 +14,8 @@ export function Header() {
             </div>
            
             <div className="menu-right">
-                <div className={ isMenuOpened ? 'open-menu opened' : 'open-menu'} onClick={handleToggleMenu}>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>    
-                <MenuNavigation  />
+                <Menu />
+                <MenuList />
             </div>
         </header>
     )

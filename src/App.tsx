@@ -1,6 +1,6 @@
 import React from 'react';
 import { Header } from './components/header';
-import { Home } from './components/home';
+import { Home } from './components/pages/home';
 import { MenuProvider } from './hooks/useMenu';
 
 export function App() {
