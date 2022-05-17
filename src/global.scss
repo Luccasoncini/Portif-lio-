@@ -20,7 +20,6 @@
 }
 
 html{
-    overflow: hidden;
     @media (max-width: 1080px) {
         font-size: 93.75%;
     }
@@ -31,7 +30,6 @@ html{
 
 body{
     -webkit-font-smoothing: antialiased;
-    overflow: hidden;
 }
 
 body, input, textarea, button {
