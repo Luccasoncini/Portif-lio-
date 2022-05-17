@@ -10,15 +10,13 @@ export function Home() {
                 <div className="row">
                     <div className="col-12">
                         <div className="homepage-principal-content">
-                            <h1>
-                                Olá, me chamo<br></br><span>Lucca</span>, sou<br></br>Desenvolvedor<br></br>Front-end
-                            </h1>
-                            <a className="contacts-button" href="">Contatos</a>
-                            <div className="homepage-redes-sociais">
-                                <div className="redes-sociais">
-                                    <a href="https://www.linkedin.com/in/lucca-soncini-727930207/" target="_blank"><FaLinkedinIn /></a>
-                                    <a href="https://github.com/Luccasoncini" target="_blank"><FaGithub /></a>
-                                </div>
+                            <div className="homepage-text">
+                                <h1>
+                                    Olá, me chamo<br></br><span>Lucca</span>, sou<br></br>Desenvolvedor<br></br>Front-end
+                                </h1>
+                                <a className="contacts-button" href="">Contatos</a>
+                            </div>
+                            <div className="homepage-img">
                                 <img src={fotoLucca} alt="" />
                             </div>
                         </div>

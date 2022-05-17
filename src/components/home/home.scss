@@ -1,53 +1,41 @@
 .homepage{
     margin-top: 50px;
+    padding: 25px 0px;
     .homepage-principal-content{
         display: flex;
-        flex-direction: column;
         justify-content: center;
-        align-items: start;
-        padding: 25px 0px;
-
-        h1{
-            font-size: 2rem;
-            text-align: start;
-            margin-bottom: 30px;
-            span{
-                color: #3e6ff4;
-            }
-        }
-        .contacts-button{
-            color: white;
-            font-weight: 600;
-            letter-spacing: 1px;
-            background-color: #3e6ff4;
-            display: inline-flex;
-            padding: 15px 30px;
-            border-radius: 0.7rem;
-        }
-        .homepage-redes-sociais{
+        align-items: center;
+        flex-flow: wrap;
+        .homepage-text{
             display: flex;
-            justify-content: space-between;
-            align-items: start;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
             width: 100%;
-            flex-flow: nowrap;
-            margin-top: 30px;
-            position: relative;
-            .redes-sociais{
-                width: 20%; 
-                display: flex;
-                flex-direction: column;
-                justify-content: center; 
-                align-items: start;
-                a{
-                    display: inline-flex;
-                    font-size: 1.5rem;
-                    color: black;
-                    margin: 15px 0px;
-                    &:hover{
-                        transform: scale(1.2);
-                    }
+            h1{
+                font-size: 2rem;
+                text-align: center;
+                margin-bottom: 30px;
+                span{
+                    color: #3e6ff4;
                 }
             }
+            .contacts-button{
+                color: white;
+                font-weight: 600;
+                letter-spacing: 1px;
+                background-color: #3e6ff4;
+                display: inline-flex;
+                padding: 15px 30px;
+                border-radius: 0.7rem;
+            }
+        }
+        .homepage-img{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-top: 30px;
             img{
                 width: 175px;
                 border-radius: 20%;

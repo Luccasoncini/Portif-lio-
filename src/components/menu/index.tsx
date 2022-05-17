@@ -1,3 +1,4 @@
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { useMenu } from "../../hooks/useMenu";
 import "./menu.scss"
 
@@ -13,6 +14,10 @@ export function MenuNavigation() {
                 <li><a className="active" onClick={handleToggleMenu} href="">Trabalhos</a></li>
                 <li><a className="active" onClick={handleToggleMenu} href="">Contatos</a></li>
             </ul>
+            <div className="redes-sociais">
+                <a href="https://www.linkedin.com/in/lucca-soncini-727930207/" target="_blank"><FaLinkedinIn /></a>
+                <a href="https://github.com/Luccasoncini" target="_blank"><FaGithub /></a>
+            </div>
         </nav>
     )
 } 

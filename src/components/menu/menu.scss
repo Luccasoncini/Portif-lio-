@@ -66,4 +66,19 @@
             }
         }
     }
+    .redes-sociais{
+        display: flex;
+        gap: 20px;
+        position: absolute;
+        bottom: 0px;
+        margin-bottom: 35px;
+        a{
+            font-size: 1.5rem;
+            color: white;
+            &:hover{
+                transform: scale(1.2);
+            }
+        }
+
+    }
 }
