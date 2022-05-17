@@ -50,6 +50,10 @@
     }
     .about-section{
         padding: 25px 0px;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         .about-principal-content{
             display: flex;
             justify-content: center;
@@ -76,6 +80,11 @@
     .skills-section{
         padding: 25px 0px;
         background-color: #3e6ff4;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
         .skills-principal-content{
             .skills-title{
                 display: flex;
