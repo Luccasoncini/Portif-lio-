@@ -1,0 +1,68 @@
+.works-section{
+    padding: 25px 0px;
+    .works-principal-content{
+        .works-title{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            h4{
+                font-weight: 600;
+                border-bottom: 3px solid #3e6ff4;
+                color:  #3e6ff4;
+                margin-bottom: 50px;
+            }
+        }
+        .works{
+            .senior-support{
+                position: relative;
+                padding-bottom: 25px;
+                .front-card{
+                    background: linear-gradient(45deg, #2D5DD3, #00A39A);
+                    min-height: 150px;
+                    width: 100%;
+                    border-radius: 2.5rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    img{
+                        width: 200px;
+                    }
+                }
+                .back-card{
+                    background-color: #100d3077;
+                    min-height: 150px;
+                    width: 100%;
+                    border-radius: 2.5rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: absolute;
+                    top: 0;
+                    opacity: 0;
+                    transition: 200ms ease-in;
+                    a{
+                        color: white;
+                        font-weight: 500;
+                        font-size: 1.5rem;
+                        text-decoration: underline;
+                        width: 100%;
+                        text-align: center;
+                        min-height: 150px;
+                        border-radius: 2.5rem;
+                        text-underline-offset: 1px;
+                        display: inline-flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+                &:hover{
+                    .back-card{
+                        opacity: 1;
+                        z-index: 10;
+                    }
+                }
+            }
+        }
+    }
+}
