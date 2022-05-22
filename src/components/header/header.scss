@@ -1,3 +1,4 @@
+
 .menu-principal{
     background-color: white;
     height: 50px;
@@ -11,6 +12,11 @@
     padding: 0px 15px;
     border-bottom: 1px solid rgba(49, 47, 47, 0.338);
     z-index: 25;
+    .col-12{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
     .menu-left{
         h4{
             font-weight: 500;

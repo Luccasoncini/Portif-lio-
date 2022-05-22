@@ -1,11 +1,19 @@
 .contactForm-section{
     padding: 25px 0px;
+    .col-12{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     .contactForm-principal-content{
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         width: 100%;
+        @media(min-width: 768px){
+            width: 75%;
+        }
         .contactForm-title{
             display: flex;
             justify-content: center;
@@ -43,6 +51,7 @@
             }
             textarea{
                 min-height: 200px;
+                resize: none;
             }
             button{
                 padding: 12px 40px;
@@ -50,7 +59,13 @@
                 color: white;
                 font-weight: 600;
                 border: inherit;
-                border-radius: 1rem;
+                border-radius: 0.7rem;
+                border: 1px solid #3e6ff4;
+                transition: 200ms ease-in;
+                &:hover{
+                    background: white;
+                    color: #3e6ff4;
+                }
             }
         }
     }

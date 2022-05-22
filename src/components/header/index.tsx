@@ -9,13 +9,19 @@ export function Header() {
      
     return(
         <header className="menu-principal">
-            <div className="menu-left">
-                <h4>Lucca Soncini</h4>
-            </div>
-           
-            <div className="menu-right">
-                <Menu />
-                <MenuList />
+            <div className="container">
+                <div className='row'>
+                    <div className='col-12'>
+                        <div className="menu-left">
+                            <h4>Lucca Soncini</h4>
+                        </div>
+                
+                        <div className="menu-right">
+                            <Menu />
+                            <MenuList />
+                        </div>
+                    </div>
+                </div>
             </div>
         </header>
     )

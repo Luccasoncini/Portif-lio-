@@ -4,26 +4,74 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    .about-principal-content{
+    width: 100%;
+    position: relative;
+    .col-12{
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-direction: column;
-        h4{
-            font-size: 1.5rem;
-            font-weight: 600;
-            border-bottom: 3px solid #3e6ff4;
-            color:  #3e6ff4;
-            margin-bottom: 50px;
-        }
-        p{
-            text-align: center;
-            color: #100d30;
-            font-weight: 500;
-            font-size: 1.1rem;
-            br{
-                display: none;
+        .about-principal-content{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; 
+            @media(min-width:1024px){
+                width: 75%;
             }
+            h4{
+                font-size: 1.5rem;
+                font-weight: 600;
+                border-bottom: 3px solid #3e6ff4;
+                color:  #3e6ff4;
+                margin-bottom: 50px;
+            }
+            p{
+                text-align: center;
+                color: #100d30;
+                font-weight: 500;
+                font-size: 1.1rem;
+                margin-bottom: 15px;
+                br{
+                    display: none;
+                }
+            }
+        }
+    }
+    .icon{
+        display: none;
+        @media(min-width: 1024px){
+            font-size: 3rem;
+            color: #3e6ff4;
+            position: absolute;
+            display: block;
+        }   
+        &.voleyball{
+            right: 8%;
+            top: 50%;
+        }
+        &.soccer{
+            right: 3%;
+            top: 30%;
+        }
+        &.computer{
+            right: 3%;
+            top: 70%;
+        }
+        &.logoPlaystation{
+            left: 8%;
+            top: 50%;
+        }
+        &.controllerPlaystation{
+            left: 3%;
+            top: 30%;
+        }
+        &.spotify{
+            left: 3%;
+            top: 70%;
+        }
+        &.coffe{
+            right: 10%;
+            top: 10%;
         }
     }
 }

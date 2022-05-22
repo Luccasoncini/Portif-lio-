@@ -5,8 +5,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    .col-12{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     .skills-principal-content{
+        @media(min-width:1024px){
+            width: 75%;
+        }
         .skills-title{
             display: flex;
             justify-content: center;
@@ -23,40 +30,71 @@
         .skills-frontend{
             display: flex;
             justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            h5{
-                font-size: 1.4rem;
-                font-weight: 600;
-                color: white;
-                margin-bottom: 20px;
-                
-            }
-            p{
-                text-align: center;
-                color: white;
-                font-weight: 500;
-                font-size: 1.1rem;
-                margin-bottom: 20px;
-            }
-            ul{
+            align-items: start;
+            flex-flow: wrap;
+            
+            .skills-frontend-top{
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                flex-flow: wrap;
-                li{
-                    svg{
-                        font-size: 2.2rem;
-                        color: white;
-                        margin: 10px;
-                        transition: 200ms ease-in;
-                        cursor: pointer;
-                        &:hover{
-                            transform: scale(1.3);
+                flex-direction: column;
+                width: 100%;
+                @media(min-width: 768px){
+                    width: 50%;
+                }
+                h5{
+                    font-size: 1.4rem;
+                    font-weight: 600;
+                    color: white;
+                    margin-bottom: 20px;
+                    
+                }
+                p{
+                    text-align: center;
+                    color: white;
+                    font-weight: 500;
+                    font-size: 1.1rem;
+                    margin-bottom: 20px;
+                }
+            }
+            .skills-frontend-bottom{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                width: 100%;
+                @media(min-width: 768px){
+                    width: 50%;
+                }
+                h5{
+                    font-size: 1.4rem;
+                    font-weight: 600;
+                    color: white;
+                    margin-bottom: 20px;
+                }
+                ul{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-flow: wrap;
+                    @media(min-width: 414px){
+                        width: 75%;
+                    }
+                    li{
+                        svg{
+                            font-size: 2.2rem;
+                            color: white;
+                            margin: 10px;
+                            transition: 200ms ease-in;
+                            cursor: pointer;
+                            &:hover{
+                                transform: scale(1.3);
+                            }
                         }
                     }
                 }
-            }
+            }   
+            
         }
     }
 }

@@ -13,9 +13,23 @@
             }
         }
         .works{
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: 15px;
+            flex-flow: wrap;
             .senior-support{
                 position: relative;
                 padding-bottom: 25px;
+                width: 100%;
+                @media(min-width: 768px){
+                    width: 49%;
+                    padding-bottom: 0px;
+
+                }
+                @media(min-width: 1024px){
+                    width: 32%;
+                }
                 .front-card{
                     background: linear-gradient(45deg, #2D5DD3, #00A39A);
                     min-height: 150px;
@@ -41,6 +55,9 @@
                     top: 0;
                     opacity: 0;
                     transition: 200ms ease-in;
+                    @media screen {
+                        
+                    }
                     a{
                         color: white;
                         font-weight: 500;
