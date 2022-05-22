@@ -42,6 +42,7 @@
     .menu{
         position: relative;
         height: 100%;
+        overflow: hidden;
         ul{
             li{
                 a{  
@@ -76,7 +77,10 @@
         .redes-sociais{
             display: flex;
             position: absolute;
-            bottom: 0px;
+            bottom: 50px;
+            @media(min-width: 1024px){
+                bottom: 0;
+            }
             a{
                 font-size: 1.5rem;
                 color: white;
