@@ -13,7 +13,7 @@ import {
 
 export function SkillsSection() {
     return (
-        <section className="skills-section">
+        <section id="skills" className="skills-section">
             <div className="container">
                 <div className="row">
                     <div className="col-12">

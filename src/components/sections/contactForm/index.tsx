@@ -51,7 +51,7 @@ export function ContactFormSection() {
     }
 
     return(
-        <section id="contatos" className="contactForm-section">
+        <section id="contact" className="contactForm-section">
             <div className="container">
                 <div className="row">
                     <div className="col-12">

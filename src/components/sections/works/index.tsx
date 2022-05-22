@@ -4,7 +4,7 @@ import logoSeniorSupport from '../../../assets/svg/seniorSupport.svg'
 
 export function WorksSection() {
     return (
-        <section className="works-section">
+        <section id="works" className="works-section">
             <div className="container">
                 <div className="row">
                     <div className="col-12">

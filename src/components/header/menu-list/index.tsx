@@ -9,11 +9,11 @@ export function MenuList() {
         <div className={ isMenuOpened ? 'navigation opened' : 'navigation'}>
             <nav className="menu">
                 <ul>
-                    <li><a className="active" onClick={handleToggleMenu} href="">Home</a></li>
-                    <li><a className="active" onClick={handleToggleMenu} href="">Sobre Mim</a></li>
-                    <li><a className="active" onClick={handleToggleMenu} href="">Habilidades</a></li>
-                    <li><a className="active" onClick={handleToggleMenu} href="">Trabalhos</a></li>
-                    <li><a className="active" onClick={handleToggleMenu} href="">Contatos</a></li>
+                    <li><a className="active" onClick={handleToggleMenu} href="#home">Home</a></li>
+                    <li><a className="active" onClick={handleToggleMenu} href="#about">Sobre Mim</a></li>
+                    <li><a className="active" onClick={handleToggleMenu} href="#skills">Habilidades</a></li>
+                    <li><a className="active" onClick={handleToggleMenu} href="#works">Trabalhos</a></li>
+                    <li><a className="active" onClick={handleToggleMenu} href="#contact">Contatos</a></li>
                 </ul>
                 <div className="redes-sociais">
                     <a href="https://www.linkedin.com/in/lucca-soncini-727930207/" target="_blank"><FaLinkedinIn /></a>

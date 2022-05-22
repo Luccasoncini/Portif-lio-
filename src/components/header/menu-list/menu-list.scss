@@ -5,6 +5,7 @@
     width: 80%;
     background-color: #100d30;
     height: calc(100vh - 50px);
+    height: calc((var(--vh, 1vh) * 100) - 50px);
     right: -100vw;
     transition: 500ms ease-in 100ms;
     padding: 35px;

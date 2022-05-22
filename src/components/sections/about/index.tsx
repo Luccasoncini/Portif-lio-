@@ -21,7 +21,7 @@ import {
 
 export function AboutSection() {
     return(
-        <section className="about-section">
+        <section id="about" className="about-section">
             <div className="container">
                 <div className="row">
                     <div className="col-12">
