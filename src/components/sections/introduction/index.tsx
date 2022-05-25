@@ -1,5 +1,6 @@
 import './introduction.scss';
 import fotoLucca from '../../../assets/img/fotoLucca.jpg';
+import curriculoLucca from '../../../assets/docs/curriculoLucca.pdf';
 
 export function IntroductionSection() {
     return(
@@ -14,7 +15,7 @@ export function IntroductionSection() {
                                 </h1>
                                 <div className='container-button'>
                                     <a className="contacts-button" href="#contact">Contatos</a>
-                                    <a className="curriculo-button" target="_blank" href='/static/media/curriculoLucca.9b908cbb8c90567448d0.pdf'>Currículo</a>
+                                    <a className="curriculo-button" target="_blank" href={curriculoLucca}>Currículo</a>
                                 </div>
                             </div>
                             <div className="introduction-img">
