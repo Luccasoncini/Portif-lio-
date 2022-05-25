@@ -6,7 +6,6 @@ import { SkillsSection } from '../../sections/skills';
 import { WorksSection } from '../../sections/works';
 import 'react-toastify/dist/ReactToastify.css';
 
-
 export function Home() {
     return(
         <>

@@ -47,21 +47,50 @@
                     color: #3e6ff4;
                 }
             }
-            .contacts-button{
-                color: white;
-                font-weight: 600;
-                letter-spacing: 1px;
-                background-color: #3e6ff4;
-                display: inline-flex;
-                padding: 15px 30px;
-                border-radius: 0.7rem;
-                border: 1px solid #3e6ff4;
-                transition: 200ms ease-in;
-                &:hover{
-                    background: white;
-                    color:#3e6ff4;
+            .container-button{
+                display: flex;
+                flex-direction: column;
+                @media(min-width: 1024px){
+                    flex-direction: row;
+                }
+
+                .contacts-button{
+                    color: white;
+                    font-weight: 600;
+                    letter-spacing: 1px;
+                    background-color: #3e6ff4;
+                    display: inline-flex;
+                    padding: 15px 30px;
+                    border-radius: 0.7rem;
+                    border: 1px solid #3e6ff4;
+                    transition: 200ms ease-in;
+                    margin-bottom: 15px;
+                    @media(min-width: 1024px){
+                        margin-bottom: 0;
+                        margin-right: 15px;
+                    }
+                    &:hover{
+                        background: white;
+                        color:#3e6ff4;
+                    }
+                }
+                .curriculo-button{
+                    color: #3e6ff4;
+                    font-weight: 600;
+                    letter-spacing: 1px;
+                    background-color: white;
+                    display: inline-flex;
+                    padding: 15px 30px;
+                    border-radius: 0.7rem;
+                    border: 1px solid #3e6ff4;
+                    transition: 200ms ease-in;
+                    &:hover{
+                        background: #3e6ff4;
+                        color: white;
+                    }
                 }
             }
+            
         }
         .introduction-img{
             display: flex;
