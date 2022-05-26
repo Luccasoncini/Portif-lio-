@@ -30,11 +30,10 @@ export function AboutSection() {
                             <p>
                                 Prazer me chamo Lucca, tenho 19 anos,
                                 sou estudante de programação desde os 17 e acho a área fantástica!!!
-                                uma pessoa muito curiosa, estou constantemente procurando cursos para me
+                                sou uma pessoa muito curiosa, estou constantemente procurando cursos para me
                                 profissionalizar, além de sempre estar atento com o mercado de desenvolvimento
-                                e suas tecnologias, no momento me encontro estudando React.Js e TypeScript,
-                                com o objetivo de conseguir uma vaga onde eu posso utilizar essas ferramentas
-                                que estou tendo o prazer de estudar.
+                                e suas tecnologias, com o objetivo de conseguir uma vaga onde eu posso utilizar 
+                                essas ferramentas que estou tendo o prazer de estudar.
                             </p>
                             <p>
                                 Tive experiências profissionais na área de desenvolvimento

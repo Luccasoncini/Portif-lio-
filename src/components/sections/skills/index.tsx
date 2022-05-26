@@ -24,7 +24,7 @@ export function SkillsSection() {
                             <div className="skills-frontend">
                                 <div className='skills-frontend-top'>
                                     <h5>Desenvolvedor Front-end</h5>
-                                    <p>Gosto muito de Front-end foi onde tive meu primeiro contato e desejo continuar me aprimorando, seja em tecnologia, ou em qualidade de código, ainda preciso melhorar diversas coisas como acessibilidade e semântica em minhas aplicações, mas isso é só o começo!</p>
+                                    <p>Front-end foi onde tive meu primeiro contato com programação, é o lugar onde domino uma maior quantidade e densidade de conteúdos e tecnologias, tenho como objetivo continuar me aprimorando ao máximo para conseguir conquistar minha tão sonhada vaga no mercado de programação! atualmente me encontro estudando o React com Typescript, e o proximo passo de estudo que irei tomar com certeza serão os testes, algo que o mercado está pedindo e também algo muito bacana para se trabalhar.</p>
                                 </div>
                                 <div className='skills-frontend-bottom'>
                                     <h5>Minhas Skills:</h5>

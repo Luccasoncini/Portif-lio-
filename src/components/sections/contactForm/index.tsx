@@ -30,7 +30,7 @@ export function ContactFormSection() {
         setIsSendingForm(true);
 
         await emailjs.sendForm(
-            'service_shfcggk',
+            'service_6l2aw0o',
             'template_ga97qzp',
             '#formulario',
             'zNLMkYLRyXR0tJ2LI'
@@ -43,11 +43,10 @@ export function ContactFormSection() {
         })
         .catch(err => {
             toast.error("Erro ao enviar o formulário, tente novamente mais tarde");
+            console.log(err);
         });
 
         setIsSendingForm(false);
-
-        
     }
 
     return(
