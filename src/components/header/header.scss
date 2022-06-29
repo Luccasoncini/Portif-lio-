@@ -114,6 +114,9 @@
                                 &:nth-of-type(5) a {
                                     transition: 500ms ease-in 600ms;
                                 }
+                                &:last-of-type{
+                                    background-color: red;
+                                }
                                 a{
                                     right: 0;
                                     opacity: 1;
