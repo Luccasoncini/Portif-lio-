@@ -1,30 +1,41 @@
-import './introduction.scss';
-import fotoLucca from '../../../assets/img/fotoLucca.jpg';
-import curriculoLucca from '../../../assets/docs/curriculoLucca.pdf';
+import "./introduction.scss"
+import { useApiData } from "../../../hooks/useApiData"
 
 export function IntroductionSection() {
-    return(
-        <section id="home" className="introduction-section">
-            <div className="container">
-                <div className="row">
-                    <div className="col-12">
-                        <div className="introduction-principal-content">
-                            <div className="introduction-text">
-                                <h1>
-                                    Olá, me chamo<br></br><span>Lucca</span>, sou<br></br>Desenvolvedor<br></br>Front-end
-                                </h1>
-                                <div className='container-button'>
-                                    <a className="contacts-button" href="#contact">Contatos</a>
-                                    <a className="curriculo-button" target="_blank" href={curriculoLucca}>Currículo</a>
-                                </div>
-                            </div>
-                            <div className="introduction-img">
-                                <img src={fotoLucca} alt="" />
-                            </div>
-                        </div>
-                    </div>
+  const { introductionData } = useApiData()
+
+  const title = introductionData.title
+  const urlBotaoContato = introductionData.contato.url
+  const textoBotaoContato = introductionData.contato.title
+  const urlBotaoCurriculo = introductionData.curriculo.url
+  const textoBotaoCurriculo = introductionData.curriculo.title
+  const imagemLucca = introductionData.image
+
+  return (
+    <section id="home" className="introduction-section">
+      <div className="container">
+        <div className="row">
+          <div className="col-12">
+            <div className="introduction-principal-content">
+              <div className="introduction-text">
+                <h1 dangerouslySetInnerHTML={{ __html: title }}></h1>
+
+                <div className="container-button">
+                  <a className="contacts-button" href={urlBotaoContato}>
+                    {textoBotaoContato}
+                  </a>
+                  <a className="curriculo-button" target="_blank" href={urlBotaoCurriculo}>
+                    {textoBotaoCurriculo}
+                  </a>
                 </div>
+              </div>
+              <div className="introduction-img">
+                <img src={imagemLucca} alt="" />
+              </div>
             </div>
-        </section>
-    )
+          </div>
+        </div>
+      </div>
+    </section>
+  )
 }

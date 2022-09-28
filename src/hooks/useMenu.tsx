@@ -1,35 +1,28 @@
-import { createContext, ReactNode, useContext, useState } from 'react'
+import { createContext, ReactNode, useContext, useState } from "react"
 
 interface MenuProviderProps {
-    children: ReactNode;
+  children: ReactNode
 }
 
 interface MenuContextData {
-    isMenuOpened: boolean;
-    handleToggleMenu: () => void;
+  isMenuOpened: boolean
+  handleToggleMenu: () => void
 }
 
-export const MenuContext = createContext<MenuContextData>(
-    {} as MenuContextData
-);
+export const MenuContext = createContext<MenuContextData>({} as MenuContextData)
 
-export function MenuProvider({ children }:MenuProviderProps) {
-    const [isMenuOpened, setIsMenuOpened] = useState(false);
+export function MenuProvider({ children }: MenuProviderProps) {
+  const [isMenuOpened, setIsMenuOpened] = useState(false)
 
-    function handleToggleMenu() {
-        setIsMenuOpened(!isMenuOpened)
-    }
+  function handleToggleMenu() {
+    setIsMenuOpened(!isMenuOpened)
+  }
 
-    return(
-        <MenuContext.Provider value={{isMenuOpened, handleToggleMenu}} >
-            {children}
-        </MenuContext.Provider>
-    )
+  return <MenuContext.Provider value={{ isMenuOpened, handleToggleMenu }}>{children}</MenuContext.Provider>
 }
-
 
 export function useMenu() {
-    const context = useContext(MenuContext)
+  const context = useContext(MenuContext)
 
-    return context;
+  return context
 }
