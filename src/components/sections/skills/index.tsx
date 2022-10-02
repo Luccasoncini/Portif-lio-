@@ -1,7 +1,8 @@
 import "./skills.scss"
 
-import { SiCss3, SiTypescript, SiJavascript, SiJquery, SiHtml5, SiWordpress, SiReact, SiSass } from "react-icons/si"
 import { useApiData } from "../../../hooks/useApiData"
+import { motion } from "framer-motion"
+import { fadeIn, fadeInDelayContainer, slideToLeft, slideToRight } from "../../../Animation"
 
 export function SkillsSection() {
   const { skillsData } = useApiData()
@@ -11,33 +12,69 @@ export function SkillsSection() {
   const textLeft = skillsData.paragrafo_skills_text
   const titleRight = skillsData.titulo_skills_main
   const icons = skillsData.skills_item_skills_main
+
+  if (!title || !titleLeft || !textLeft || !titleRight || !icons) {
+    return null
+  }
+
   return (
     <section id="skills" className="skills-section">
       <div className="container">
         <div className="row">
           <div className="col-12">
             <div className="skills-principal-content">
-              <div className="skills-title">
+              <motion.div
+                className="skills-title"
+                initial="offscreen"
+                whileInView="onscreen"
+                viewport={{ once: true, amount: 0.8 }}
+                variants={fadeIn}
+              >
                 <h4>{title}</h4>
-              </div>
+              </motion.div>
               <div className="skills-frontend">
                 <div className="skills-frontend-top">
-                  <h5>{titleLeft}</h5>
-                  <p dangerouslySetInnerHTML={{ __html: textLeft }}></p>
+                  <motion.h5
+                    initial="offscreen"
+                    whileInView="onscreen"
+                    viewport={{ once: true, amount: 0.8 }}
+                    variants={slideToRight}
+                  >
+                    {titleLeft}
+                  </motion.h5>
+                  <motion.p
+                    initial="offscreen"
+                    whileInView="onscreen"
+                    viewport={{ once: true, amount: 0.8 }}
+                    variants={fadeIn}
+                    dangerouslySetInnerHTML={{ __html: textLeft }}
+                  ></motion.p>
                 </div>
                 <div className="skills-frontend-bottom">
-                  <h5>{titleRight}</h5>
-                  <ul>
+                  <motion.h5
+                    initial="offscreen"
+                    whileInView="onscreen"
+                    viewport={{ once: true, amount: 0.8 }}
+                    variants={slideToLeft}
+                  >
+                    {titleRight}
+                  </motion.h5>
+                  <motion.ul
+                    initial="offscreen"
+                    whileInView="onscreen"
+                    viewport={{ once: true, amount: 0.8 }}
+                    variants={fadeInDelayContainer}
+                  >
                     {icons.map(({ icone_skills_main, url_skills_main }, i) => {
                       return (
                         <li key={i}>
-                          <a href={url_skills_main}>
+                          <motion.a href={url_skills_main} variants={fadeIn}>
                             <span style={{ backgroundImage: `url(${icone_skills_main})` }}></span>
-                          </a>
+                          </motion.a>
                         </li>
                       )
                     })}
-                  </ul>
+                  </motion.ul>
                 </div>
               </div>
             </div>

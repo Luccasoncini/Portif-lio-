@@ -2,6 +2,8 @@ import { FaGithub, FaLinkedinIn, FaWhatsapp } from "react-icons/fa"
 
 import "./footer.scss"
 import { useApiData } from "../../hooks/useApiData"
+import { motion } from "framer-motion"
+import { fadeIn, fadeInDelayContainer } from "../../Animation"
 
 export function Footer() {
   const { redesSociais } = useApiData()
@@ -11,16 +13,29 @@ export function Footer() {
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <h2>Lucca</h2>
-            <div className="redes-sociais-footer">
+            <motion.h2
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: true, amount: 0.8 }}
+              variants={fadeIn}
+            >
+              Lucca
+            </motion.h2>
+            <motion.div
+              className="redes-sociais-footer"
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: true, amount: 0.8 }}
+              variants={fadeInDelayContainer}
+            >
               {redesSociais.map(({ icone, url }, i) => {
                 return (
-                  <a href={url} target="_blank" key={i}>
+                  <motion.a href={url} target="_blank" key={i} variants={fadeIn}>
                     <img src={icone} alt="" />
-                  </a>
+                  </motion.a>
                 )
               })}
-            </div>
+            </motion.div>
             <p>Feito com ♥ por Lucca Dias Soncini</p>
           </div>
         </div>

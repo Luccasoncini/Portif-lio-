@@ -1,12 +1,17 @@
 import "./works.scss"
 
-import logoSeniorSupport from "../../../assets/svg/seniorSupport.svg"
 import { useApiData } from "../../../hooks/useApiData"
+import { motion } from "framer-motion"
+import { fadeIn, fadeInDelayContainer } from "../../../Animation"
 
 export function WorksSection() {
   const { worksData } = useApiData()
   const title = worksData.title
   const trabalhos = worksData.trabalhos
+
+  if (!title || !trabalhos) {
+    return null
+  }
 
   return (
     <section id="works" className="works-section">
@@ -15,12 +20,25 @@ export function WorksSection() {
           <div className="col-12">
             <div className="works-principal-content">
               <div className="works-title">
-                <h4>{title}</h4>
+                <motion.h4
+                  initial="offscreen"
+                  whileInView="onscreen"
+                  viewport={{ once: true, amount: 0.8 }}
+                  variants={fadeIn}
+                >
+                  {title}
+                </motion.h4>
               </div>
-              <div className="works">
+              <motion.div
+                className="works"
+                initial="offscreen"
+                whileInView="onscreen"
+                viewport={{ once: true, amount: 0.8 }}
+                variants={fadeInDelayContainer}
+              >
                 {trabalhos.map(({ imagem_works, link_works }, i) => {
                   return (
-                    <div className="card" key={i}>
+                    <motion.div className="card" key={i} variants={fadeIn}>
                       <div className="front-card">
                         <img src={imagem_works} alt="" />
                       </div>
@@ -29,10 +47,10 @@ export function WorksSection() {
                           Visitar site
                         </a>
                       </div>
-                    </div>
+                    </motion.div>
                   )
                 })}
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>

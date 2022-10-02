@@ -5,7 +5,6 @@ import { IntroductionSection } from "../../sections/introduction"
 import { SkillsSection } from "../../sections/skills"
 import { WorksSection } from "../../sections/works"
 import "react-toastify/dist/ReactToastify.css"
-import { useApiData } from "../../../hooks/useApiData"
 
 export function Home() {
   return (

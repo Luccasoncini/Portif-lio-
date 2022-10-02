@@ -1,11 +1,37 @@
 .loading-div {
   padding-top: 60px;
-  min-height: calc(100vh - 60px);
+  padding-bottom: 40px;
+  min-height: calc(100vh);
   display: flex;
   justify-content: center;
   align-items: center;
-  svg {
-    width: 100%;
-    max-height: 500px;
+  gap: 1rem;
+  position: relative;
+  overflow: hidden;
+  .loading-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-right: 42px;
+    .circle {
+      width: 30px;
+      height: 30px;
+      background: linear-gradient(45deg, #3e6ff4, #3ee0f4);
+      border-radius: 50px;
+      transition: 300ms ease;
+      transform: scale(0);
+      &.active {
+        transform: scale(1);
+      }
+    }
+    .circle-gravity {
+      width: 30px;
+      height: 30px;
+      background: linear-gradient(45deg, #3e6ff4, #3ee0f4);
+      border-radius: 50px;
+      position: absolute;
+      right: 0;
+    }
   }
 }

@@ -1,159 +1,119 @@
 :root {
-    --background: #f0f2f5;
-    --green: #33cc95;
-    --red: #e52e4d;
-    --blue: #5429cc;
+  --background: #f0f2f5;
+  --green: #33cc95;
+  --red: #e52e4d;
+  --blue: #5429cc;
 
-    --blue-light: #6933ff;
+  --blue-light: #6933ff;
 
-    --text-title: #363f5f;
-    --text-body: #969cb3;
+  --text-title: #363f5f;
+  --text-body: #969cb3;
 
-    --background: #f0f2f5;
-    --shape: #ffffff;
+  --background: #f0f2f5;
+  --shape: #ffffff;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html{
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 
-    @media (max-width: 1080px) {
-        font-size: 93.75%;
-    }
-    @media (max-width: 720px) {
-        font-size: 87.5%;
-    }
+  @media (max-width: 1080px) {
+    font-size: 93.75%;
+  }
+  @media (max-width: 720px) {
+    font-size: 87.5%;
+  }
 }
 
-body{
-    -webkit-font-smoothing: antialiased;
+body {
+  -webkit-font-smoothing: antialiased;
 }
 
-body, input, textarea, button {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
+body,
+input,
+textarea,
+button {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
 }
-
 
 button {
-    cursor: pointer;
+  cursor: pointer;
 }
 
-a{  
-    display: block;
-    text-decoration: none;
+a {
+  display: block;
+  text-decoration: none;
 }
 
-ul{
-    list-style: none;
+ul {
+  list-style: none;
 }
 
 [disabled] {
-    opacity: 0.6;
-    cursor: not-allowed;
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
-h1{
-    font-size: 2.2rem;
+h1 {
+  font-size: 2.2rem;
 }
-h2{
-    font-size: 1.9rem;
+h2 {
+  font-size: 1.9rem;
 }
-h3{
-    font-size: 1.8rem;
+h3 {
+  font-size: 1.8rem;
 }
-h4{
-    font-size: 1.6rem;
+h4 {
+  font-size: 1.6rem;
 }
-h5{
-    font-size: 1.4rem;
+h5 {
+  font-size: 1.4rem;
 }
-h6{
-    font-size: 1.2rem;
-}
-
-.container{
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-    @media (min-width:576px) {
-        max-width: 540px;
-    }
-    @media (min-width:768px) {
-        max-width: 720px;
-    }
-    @media (min-width:992px) {
-        max-width: 960px;
-    }
-    @media (min-width:1200px) {
-        max-width: 1140px;
-    }
+h6 {
+  font-size: 1.2rem;
 }
 
-.row{
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  @media (min-width: 576px) {
+    max-width: 540px;
+  }
+  @media (min-width: 768px) {
+    max-width: 720px;
+  }
+  @media (min-width: 992px) {
+    max-width: 960px;
+  }
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+  }
 }
 
-.col-12{
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%;
-    max-width: 100%;
-    position: relative;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
 }
 
-@keyframes opacityOn {
-    from {
-       opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes opacityOff {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
-}
-
-@keyframes slideToRight {
-    from {
-        left: -50vw;
-        opacity: 0;
-    }
-    to {
-        left: 0;
-        opacity: 1;
-    }
-}
-
-@keyframes slideToLeft {
-    from {
-        position: relative;
-        right: -50vw;
-        opacity: 0;
-    }
-    to {
-        position: relative;
-        right: 0;
-        opacity: 1;
-    }
+.col-12 {
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
 }

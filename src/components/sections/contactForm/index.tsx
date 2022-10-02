@@ -3,6 +3,8 @@ import emailjs from "emailjs-com"
 import { FormEvent, useState } from "react"
 import { toast } from "react-toastify"
 import { useApiData } from "../../../hooks/useApiData"
+import { motion } from "framer-motion"
+import { fadeIn, slideToRight } from "../../../Animation"
 
 export function ContactFormSection() {
   const { contactData } = useApiData()
@@ -49,6 +51,10 @@ export function ContactFormSection() {
   const title = contactData.title
   const text = contactData.text
 
+  if (!title && !text) {
+    return null
+  }
+
   return (
     <section id="contact" className="contactForm-section">
       <div className="container">
@@ -56,10 +62,31 @@ export function ContactFormSection() {
           <div className="col-12">
             <div className="contactForm-principal-content">
               <div className="contactForm-title">
-                <h4>{title}</h4>
-                <p dangerouslySetInnerHTML={{ __html: text }}></p>
+                <motion.h4
+                  initial="offscreen"
+                  whileInView="onscreen"
+                  viewport={{ once: true, amount: 0.8 }}
+                  variants={fadeIn}
+                >
+                  {title}
+                </motion.h4>
+                <motion.p
+                  initial="offscreen"
+                  whileInView="onscreen"
+                  viewport={{ once: true, amount: 0.8 }}
+                  variants={fadeIn}
+                  dangerouslySetInnerHTML={{ __html: text }}
+                ></motion.p>
               </div>
-              <form action="" id="formulario" onSubmit={sendEmail}>
+              <motion.form
+                action=""
+                id="formulario"
+                initial="offscreen"
+                whileInView="onscreen"
+                viewport={{ once: true, amount: 0.8 }}
+                variants={slideToRight}
+                onSubmit={sendEmail}
+              >
                 <input value={name} onChange={HandleSetName} required type="text" name="from_name" placeholder="Nome" />
                 <input value={email} onChange={HandleSetEmail} required type="email" name="email" placeholder="Email" />
                 <textarea
@@ -76,7 +103,7 @@ export function ContactFormSection() {
                 ) : (
                   <button type="submit">Enviar</button>
                 )}
-              </form>
+              </motion.form>
             </div>
           </div>
         </div>

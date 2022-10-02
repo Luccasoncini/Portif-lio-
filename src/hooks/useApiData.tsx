@@ -1,5 +1,6 @@
 import axios from "axios"
 import { createContext, ReactNode, useContext, useEffect, useState } from "react"
+import { toast } from "react-toastify"
 import {
   AboutData,
   ApiAcfDataContent,
@@ -72,11 +73,14 @@ export function ApiDataProvider({ children }: ApiProviderProps) {
       .then((res): any => {
         const response = res.data.acf
         setApiData(response)
-        setIsLoading(false)
+        setTimeout(() => {
+          setIsLoading(false)
+        }, 3000)
       })
 
-      .catch(() => {
-        console.log("Deu algo de errado na api da home")
+      .catch((e) => {
+        const errorNumber = e.response.status
+        toast.error(`Ops, algo deu errado Erro: ${errorNumber}`)
       })
   }, [])
 
@@ -87,11 +91,14 @@ export function ApiDataProvider({ children }: ApiProviderProps) {
       .then((res2): any => {
         const response2 = res2.data
         setRedesSociais(response2)
-        setIsLoading(false)
+        setTimeout(() => {
+          setIsLoading(false)
+        }, 3000)
       })
 
-      .catch(() => {
-        console.log("Deu algo de errado na api das options ")
+      .catch((e) => {
+        const errorNumber = e.response.status
+        toast.error(`Ops, algo deu errado Erro: ${errorNumber}`)
       })
   }, [])
 

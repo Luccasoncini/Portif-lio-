@@ -35,7 +35,6 @@
       flex-direction: column;
       width: 100%;
       position: relative;
-      animation: slideToRight 2s;
       h1 {
         font-size: 2rem;
         text-align: center;
@@ -97,7 +96,6 @@
       align-items: center;
       width: 100%;
       margin-top: 30px;
-      animation: slideToLeft 2s;
       img {
         width: 175px;
         border-radius: 20%;
