@@ -56,7 +56,7 @@ export const fadeInDelayContainer: Variants = {
 
 export const slideToRight: Variants = {
   offscreen: {
-    x: -500,
+    x: -50,
     opacity: 0
   },
   onscreen: {
@@ -70,7 +70,7 @@ export const slideToRight: Variants = {
 
 export const slideToLeft: Variants = {
   offscreen: {
-    x: 500,
+    x: 50,
     opacity: 0
   },
   onscreen: {
