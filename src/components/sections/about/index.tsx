@@ -15,12 +15,76 @@ import { fadeIn, iconsVariantsLeft, iconsVariantsRight } from "../../../Animatio
 export function AboutSection() {
   const { aboutData } = useApiData()
 
+  const constraintsRefVoleyball = useRef(null)
+  const constraintsRefSoccer = useRef(null)
+  const constraintsRefComputer = useRef(null)
+  const constraintsRefPlaystation = useRef(null)
+  const constraintsRefController = useRef(null)
+  const constraintsRefSpotify = useRef(null)
+  const constraintsRefCoffe = useRef(null)
+
   const title = aboutData.title
   const text = aboutData.text
-  const constraintsRef = useRef(null)
 
   if (!title && !text) {
     return null
+  }
+
+  const Icons = [
+    {
+      NameClass: "icon voleyball",
+      icon: <MdSportsVolleyball />,
+      NomeReferencia: constraintsRefVoleyball
+    },
+    {
+      NameClass: "icon soccer",
+      icon: <MdOutlineSportsSoccer />,
+      NomeReferencia: constraintsRefSoccer
+    },
+    {
+      NameClass: "icon computer",
+      icon: <MdOutlineComputer />,
+      NomeReferencia: constraintsRefComputer
+    },
+    {
+      NameClass: "icon logoPlaystation",
+      icon: <IoLogoPlaystation />,
+      NomeReferencia: constraintsRefPlaystation
+    },
+    {
+      NameClass: "icon controllerPlaystation",
+      icon: <GiConsoleController />,
+      NomeReferencia: constraintsRefController
+    },
+    {
+      NameClass: "icon spotify",
+      icon: <FaSpotify />,
+      NomeReferencia: constraintsRefSpotify
+    },
+    {
+      NameClass: "icon coffe",
+      icon: <FaCoffee />,
+      NomeReferencia: constraintsRefCoffe
+    }
+  ]
+
+  const renderIcons = () => {
+    return Icons.map(({ icon, NameClass, NomeReferencia }, i) => {
+      return (
+        <motion.div
+          key={i}
+          ref={NomeReferencia}
+          className={NameClass}
+          initial="offscreen"
+          whileInView="onscreen"
+          variants={iconsVariantsRight}
+        >
+          <motion.div viewport={{ once: true, amount: 0.8 }} drag dragConstraints={NomeReferencia}>
+            {icon}
+          </motion.div>
+        </motion.div>
+      )
+    })
   }
 
   return (
@@ -41,85 +105,7 @@ export function AboutSection() {
           </div>
         </div>
       </div>
-      <motion.div ref={constraintsRef} className="container-icons">
-        <motion.div
-          className="icon voleyball"
-          initial="offscreen"
-          whileInView="onscreen"
-          viewport={{ once: true, amount: 0.8 }}
-          variants={iconsVariantsRight}
-          drag
-          dragConstraints={constraintsRef}
-        >
-          <MdSportsVolleyball />
-        </motion.div>
-        <motion.div
-          className="icon soccer"
-          initial="offscreen"
-          whileInView="onscreen"
-          viewport={{ once: true, amount: 0.8 }}
-          variants={iconsVariantsRight}
-          drag
-          dragConstraints={constraintsRef}
-        >
-          <MdOutlineSportsSoccer />
-        </motion.div>
-        <motion.div
-          className="icon computer"
-          initial="offscreen"
-          whileInView="onscreen"
-          viewport={{ once: true, amount: 0.8 }}
-          variants={iconsVariantsRight}
-          drag
-          dragConstraints={constraintsRef}
-        >
-          <MdOutlineComputer />
-        </motion.div>
-        <motion.div
-          className="icon logoPlaystation"
-          initial="offscreen"
-          whileInView="onscreen"
-          viewport={{ once: true, amount: 0.8 }}
-          variants={iconsVariantsLeft}
-          drag
-          dragConstraints={constraintsRef}
-        >
-          <IoLogoPlaystation />
-        </motion.div>
-        <motion.div
-          className="icon controllerPlaystation"
-          initial="offscreen"
-          whileInView="onscreen"
-          viewport={{ once: true, amount: 0.8 }}
-          variants={iconsVariantsLeft}
-          drag
-          dragConstraints={constraintsRef}
-        >
-          <GiConsoleController />
-        </motion.div>
-        <motion.div
-          className="icon spotify"
-          initial="offscreen"
-          whileInView="onscreen"
-          viewport={{ once: true, amount: 0.8 }}
-          variants={iconsVariantsLeft}
-          drag
-          dragConstraints={constraintsRef}
-        >
-          <FaSpotify />
-        </motion.div>
-        <motion.div
-          className="icon coffe"
-          initial="offscreen"
-          whileInView="onscreen"
-          viewport={{ once: true, amount: 0.8 }}
-          variants={iconsVariantsRight}
-          drag
-          dragConstraints={constraintsRef}
-        >
-          <FaCoffee />
-        </motion.div>
-      </motion.div>
+      <motion.div className="container-icons">{renderIcons()}</motion.div>
     </section>
   )
 }
