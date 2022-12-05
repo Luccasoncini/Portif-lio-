@@ -17,7 +17,7 @@
     .circle {
       width: 30px;
       height: 30px;
-      background: linear-gradient(45deg, #3e6ff4, #3ee0f4);
+      background: linear-gradient(45deg, var(--blue), var(--blueLight));
       border-radius: 50px;
       transition: 300ms ease;
       transform: scale(0);
@@ -28,7 +28,7 @@
     .circle-gravity {
       width: 30px;
       height: 30px;
-      background: linear-gradient(45deg, #3e6ff4, #3ee0f4);
+      background: linear-gradient(45deg, var(--blue), var(--blueLight));
       border-radius: 50px;
       position: absolute;
       right: 0;

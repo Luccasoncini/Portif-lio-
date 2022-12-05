@@ -1,16 +1,11 @@
 :root {
-  --background: #f0f2f5;
-  --green: #33cc95;
-  --red: #e52e4d;
-  --blue: #5429cc;
-
-  --blue-light: #6933ff;
-
-  --text-title: #363f5f;
-  --text-body: #969cb3;
-
-  --background: #f0f2f5;
-  --shape: #ffffff;
+  --white: #ffffff;
+  --black: black;
+  --blue: #3e6ff4;
+  --blueLight: #3ee0f4;
+  --darkBackground: #100d30;
+  --backgroundCard: #100d3077;
+  --blur: #f2f2f2;
 }
 
 * {
@@ -28,6 +23,10 @@ html {
   @media (max-width: 720px) {
     font-size: 87.5%;
   }
+}
+
+.overflow {
+  overflow: hidden;
 }
 
 body {
