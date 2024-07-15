@@ -16,7 +16,7 @@ export function Loading() {
   }, [gravityCirclesQuantity])
 
   setTimeout(() => {
-    if (activeCircle != 3) {
+    if (activeCircle !== 3) {
       setActiveCircle(activeCircle + 1)
     } else {
       setActiveCircle(1)

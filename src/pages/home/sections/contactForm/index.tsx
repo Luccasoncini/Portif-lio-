@@ -30,7 +30,7 @@ export function ContactFormSection() {
     setIsSendingForm(true)
 
     await emailjs
-      .sendForm("service_6l2aw0o", "template_ga97qzp", "#formulario", "zNLMkYLRyXR0tJ2LI")
+      .sendForm("service_ixybj8b", "template_ga97qzp", "#formulario", "zNLMkYLRyXR0tJ2LI")
       .then((res) => {
         setName("")
         setEmail("")

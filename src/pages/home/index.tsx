@@ -4,14 +4,14 @@ import { ContactFormSection } from "./sections/contactForm"
 import { IntroductionSection } from "./sections/introduction"
 import { SkillsSection } from "./sections/skills"
 import { WorksSection } from "./sections/works"
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 
 export function Home() {
   const { id } = useParams()
 
   useEffect(() => {
     // @ts-ignore
-    if (id == undefined) {
+    if (id === undefined) {
       const element = document.getElementById("inicio")
       if (element) {
         element.scrollIntoView()

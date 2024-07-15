@@ -22,7 +22,7 @@ export function MenuProvider({ children }: MenuProviderProps) {
     element.classList.remove("overflow")
 
     // ** If skin is not light add skin class
-    if (isMenuOpened == true) {
+    if (isMenuOpened === true) {
       element.classList.add("overflow")
     }
   }, [isMenuOpened])

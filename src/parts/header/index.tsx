@@ -53,7 +53,7 @@ export function Header() {
                     <div className="redes-sociais">
                       {redesSociais.map(({ icone, url }, i) => {
                         return (
-                          <a href={url} target="_blank" key={i}>
+                          <a href={url} target="_blank" key={i} rel="noreferrer" >
                             <img src={icone} alt="" />
                           </a>
                         )

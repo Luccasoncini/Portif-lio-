@@ -1,5 +1,3 @@
-import { FaGithub, FaLinkedinIn, FaWhatsapp } from "react-icons/fa"
-
 import "./footer.scss"
 import { useApiData } from "../../hooks/useApiData"
 import { motion } from "framer-motion"
